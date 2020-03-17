@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Course gpa calculator</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <form>
+        <table class="table table-dark" id="table">
+            <tr>
+                <th>Assessment</th>
+                <th>Grade</th>
+                <th>Weight</th>
+            </tr>
+            <tr id="table1">
+                <th><input type="text" id="assessment" class="form-control"  placeholder="e.g. Homework"></th>   
+                <th><input type="number" class="form-control" min='0' max='100'placeholder="e.g. 95"id="grade"></th>
+                <th><input type="number" class="form-control" id="weight" min="0" max="100"placeholder="e.g. 10"></th>
+            </tr>
+            <tr>
+                <th><input type="text" class="form-control"  placeholder="e.g. Quiz"></th>   
+                <th><input type="number" class="form-control" min='0' max='100'placeholder="e.g. 95"id="grade"></th>
+                <th><input type="number" class="form-control" id="weight" min="0" max="100"placeholder="e.g. 10"></th>
+            </tr>
+            <tr>
+                <th><input type="text" class="form-control"  placeholder="e.g. Project"></th>   
+                <th><input type="number" class="form-control" min='0' max='100'placeholder="e.g. 95"id="grade"></th>
+                <th><input type="number" class="form-control" id="weight" min="0" max="100"placeholder="e.g. 10"></th>
+            </tr>
+            <tr>
+                <th><input type="text" class="form-control"  placeholder="e.g. Exam"></th>   
+                <th><input type="number" class="form-control" min='0' max='100'placeholder="e.g. 95"id="grade"></th>
+                <th><input type="number" class="form-control" id="weight" min="0" max="100"placeholder="e.g. 10"></th>
+            </tr>
+        </table>
+        <div style="text-align: center;">
+            <input type="button" id="but" class="btn btn-primary btn-lg" onclick="calculate(document.getElementById('grade').value,document.getElementById('weight').value)" value="Calculate!"></button>
+            <input type="button" id="but" class="btn btn-secondary btn-lg" onclick="cloneAssessment()" value="Add Assessment">
+            <input type="reset"  id="but" class="btn btn-dark btn-lg" value="Reset!"><br>
+        </div>
+        <h2 style="text-align:center" id=letterGrade></h2>
+        <h2 style="text-align:center" id=PercentGrade></h2>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+<script src="calculator.js"></script>
+<script src="style.css"></script>
+</html>
